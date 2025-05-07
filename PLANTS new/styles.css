@@ -1,0 +1,1073 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #539649;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:first-child {
+    color: #3e3e3e;
+}
+
+
+.nav-links a:not(:first-child):hover {
+    color: #333;
+}
+
+.nav-links a:not(:first-child):hover::after {
+    display: none;
+}
+
+.nav-links a:first-child:hover {
+    color: #ff7b00;
+}
+
+.order-now-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.7rem;
+    background-color: #539649;
+    color: #ffffff;
+    border: 2px solid #539649;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.order-now-btn:hover {
+    background-color: #17610c;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    padding: 6rem 2rem;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3.0rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    color: #333;
+}
+
+.highlight {
+    color: #2ecc71;
+}
+
+.hero p {
+    font-size: 0.8rem;
+    margin-bottom: 2.9rem;
+    color: #666;
+    max-width: 500px;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.cta-button {
+    padding: 0.6rem 1.9rem;
+    font-size: 0.7rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.cta-button.primary {
+    background-color: #ffffff;
+    color: rgb(255, 123, 0);
+    border: 2px solid #ff7700;
+}
+
+.cta-button.secondary {
+    background-color:  #539649;
+    color: #ffffff;
+    border: 2px solid #539649;
+}
+
+.cta-button.primary:hover {
+    background-color: #ff7b00;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.cta-button.secondary:hover {
+    background-color: #2ecc71;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    position: relative;
+    height: 100%;
+    width: 500px;
+    margin-left: auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Featured Plants Section */
+.featured-plants {
+    padding: 5rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.featured-plants h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plant-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+}
+
+.plant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.plant-card h3 {
+    padding: 1rem;
+    margin: 0;
+}
+
+.plant-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+/* Care Tips Section */
+.care-tips {
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.care-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.care-tips h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #333;
+    position: relative;
+}
+
+.care-tips h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #539649;
+    border-radius: 2px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tip-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tip-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #f1f8f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover .tip-icon {
+    background-color: #539649;
+}
+
+.tip-icon i {
+    font-size: 1.8rem;
+    color: #539649;
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover .tip-icon i {
+    color: white;
+}
+
+.tip-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.tip-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f8f1;
+    color: #333333;
+    padding: 2rem 1rem 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    margin-bottom: 0.8rem;
+    color: #539649;
+    font-size: 1.1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.4rem;
+}
+
+.footer-section a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #539649;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(83, 150, 73, 0.2);
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Social Banner */
+.social-banner {
+    background-color: #e9e9e9;
+    padding: 0.8rem 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.social-container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.social-links {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+}
+
+.social-track {
+    position: absolute;
+    top: 0;
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.social-track:first-child {
+    animation: scroll 25s linear infinite;
+}
+
+.social-track:last-child {
+    animation: scroll2 25s linear infinite;
+}
+
+.social-text {
+    color: #070707;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 0 3rem;
+    flex-shrink: 0;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll2 {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .order-now-btn {
+        display: none;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .hero {
+        margin-top: 60px;
+        padding: 4rem 1rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .cta-button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin: 0 auto 2rem;
+        padding: 0 1rem;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        height: 400px;
+    }
+    
+    .featured-plants h2,
+    .care-tips h2 {
+        font-size: 2rem;
+    }
+
+    .nav-links a:first-child::after,
+    .nav-links a:hover::after {
+        bottom: -2px;
+    }
+
+    .social-text {
+        font-size: 1rem;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .button-group {
+        max-width: 250px;
+    }
+
+    .cta-button {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .social-text {
+        font-size: 0.9rem;
+        padding: 0 1.5rem;
+    }
+}
+
+/* Plant Categories Section */
+.plant-categories {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+}
+
+.categories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.category-image {
+    grid-row: span 2;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category-card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-height: 180px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.category-icon i {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.category-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.category-card p {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Category Card Colors */
+.category-card.green {
+    background-color: #f1f8f1;
+}
+
+.category-card.green .category-icon {
+    background-color: #539649;
+}
+
+.category-card.orange {
+    background-color: #fff5eb;
+}
+
+.category-card.orange .category-icon {
+    background-color: #ff7b00;
+}
+
+.category-card.pink {
+    background-color: #ffebf3;
+}
+
+.category-card.pink .category-icon {
+    background-color: #ff69b4;
+}
+
+.category-card.blue {
+    background-color: #ebf5ff;
+}
+
+.category-card.blue .category-icon {
+    background-color: #4a90e2;
+}
+
+/* Responsive Design for Categories */
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+
+    .category-image {
+        grid-row: 1;
+        height: 300px;
+    }
+
+    .category-card {
+        padding: 1.2rem;
+        min-height: auto;
+    }
+
+    .category-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .category-icon i {
+        font-size: 1rem;
+    }
+
+    .category-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .category-card p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .plant-categories {
+        padding: 3rem 1rem;
+    }
+
+    .category-image {
+        height: 250px;
+    }
+
+    .category-card {
+        padding: 1rem;
+    }
+}
+
+/* Responsive Design for Care Tips */
+@media (max-width: 768px) {
+    .care-tips {
+        padding: 4rem 1.5rem;
+    }
+
+    .care-tips h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .tips-grid {
+        gap: 1.5rem;
+    }
+
+    .tip-card {
+        padding: 1.5rem;
+    }
+
+    .tip-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tip-icon i {
+        font-size: 1.5rem;
+    }
+
+    .tip-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .tip-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .care-tips {
+        padding: 3rem 1rem;
+    }
+
+    .care-tips h2 {
+        font-size: 1.8rem;
+    }
+
+    .tip-card {
+        padding: 1.2rem;
+    }
+
+    .tip-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tip-icon i {
+        font-size: 1.3rem;
+    }
+
+    .tip-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .tip-card p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Product Grid Styles */
+.products-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+}
+
+.products-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.products-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.products-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background: #f9f9f9;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discount-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #ff7b00;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.favorite-btn i {
+    color: #ff4757;
+    font-size: 1rem;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.current-price {
+    color: #ff7b00;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+.quick-order-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #539649;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quick-order-btn:hover {
+    background-color: #457c3d;
+}
+
+/* Responsive Design for Product Grid */
+@media (max-width: 768px) {
+    .products-section {
+        padding: 3rem 1rem;
+    }
+
+    .products-header h1 {
+        font-size: 2rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-section {
+        padding: 2rem 1rem;
+    }
+
+    .products-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+
+    .product-name {
+        font-size: 1rem;
+    }
+
+    .current-price {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile Navigation Styles */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        opacity: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 0.8rem 0;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+
+    /* Hamburger Animation */
+    .toggle span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Navigation Link Animation */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+} 
